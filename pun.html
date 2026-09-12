@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>語呂合わせ当てゲーム</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha256-fx038NkLY4U1TCrBDiu5FWPEa9eiZu01EiLryshJbCo=" crossorigin="anonymous">
+</head>
+
+<body class="bg-success-subtle">
+  <header>
+    <nav class="navbar bg-success" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">語呂合わせ当てゲーム</a>
+        <button onclick="location.reload();" class="btn btn-primary">当たりを変えて再挑戦</button>
+      </div>
+    </nav>
+  </header>
+  <div class="container pt-2">
+    <h4>次の日記の<span class="text-danger">赤い文字の部分</span>の語呂合わせの中からあたりを見つけてください。</h4>
+    <h5>例：一休さん=193 闇夜=834など</h5>
+    <div class="card">
+      <div class="card-body">
+        <p>
+          朝、<span class="text-danger">おはよう</span>と元気に挨拶を交わしながら、頼んだケーキを<span class="text-danger">パク</span>っと一口食べてフッと笑う。カフェを出るといいパパが子どもを抱っこして歩いていた。昨日は街を救急車が走っていったけれど、大事に至らなければいい。今日は街中でいい服を着こなしている人をよく見かける。道端で出会った好青年も爽やかに声をかけてくれた。<br>
+          公園へ足を伸ばすと、ベンチの近くで<span class="text-danger">ニャーニャーニャー</span>と鳴くノラ猫に出会う。カバンに入っていたおやつをあげると<span class="text-danger">ニコ</span>っと笑うような表情を見せた。見上げてくる瞳に<span class="text-danger">ツバサ</span>が生えているかのような自由さを感じる。お気に入りの<span class="text-danger">ミツコ</span>さんのエッセイ本を取り出し、ミックスジュースを飲みながらページをめくると、<span class="text-danger">最高</span>のひとときが流れた。公園の隅にはなぜか<span class="text-danger">フクロウ</span>の置物まで飾ってあり、少し不思議な空間だ。<br>
+          夕方になり、今日出会った人々に<span class="text-danger">サンキュー</span>と<span class="text-danger">心</span>の中で感謝を唱えながら家に向かう。夕食は<span class="text-danger">ニンニク</span>をたっぷり効かせた料理にする予定だ。お肉によろしくと声をかけながら、冷蔵庫から取り出すと、お腹の虫がゴトゴトと鳴り出した。<br>
+          夜はサクサクのコロッケを揚げて食べた。一口食べると、まるで<span class="text-danger">ご苦労</span>様と労いのお言葉をもらったかのように疲れが吹き飛ぶ。お風呂に浸かると<span class="text-danger">納豆</span>のように粘り強く頑張った1日の疲労がほぐれていく。体をしっかりほぐす時間がとても心地よい。<br>
+          部屋に戻ってふと鏡を見ると、顔に大きな腫れができていて驚いた。明日は<span class="text-danger">同い</span>年の友人と会う約束があるので、早く引いてほしい。<span class="text-danger">ハヤシ</span>さんのアドバイス通りに薬をぬる。自分の体を<span class="text-danger">ヤクザ</span>な扱いをしてはいけないと反省した。<br>
+          街では110番に通報するような大きな事件も<span class="text-danger">ないし</span>、今日という日を終えられることがありがたい。衣替えに向けて<span class="text-danger">衣服</span>の整理をしてからベッドに入る。スマホの画面を<span class="text-danger">クイック</span>に操作して日記を保存した。夜空を見上げるとクジラのような大きく<span class="text-danger">キュート</span>な雲がゆっくりと流れている。これで今日の<span class="text-danger">苦肉</span>の策の日記作成も無事に終了だ。明日もまた<span class="text-danger">苦労</span>のない、穏やかで平和な1日でありますように。さあ、明日に向かって<span class="text-danger">レッツゴー </span>。<br>
+          ※架空の日記であり、フィクションです。(Geminiで生成したものを一部改変しています。)
+        </p>
+      </div>
+    </div>
+    <p>答えとなる3桁の番号を入力してください。（半角英数字で入力してください。）</p>
+
+    <div class="row">
+      <div class="col-sm-9 col-lg-6">
+        <div class="input-group mb-3">
+          <input type="number" id="playerAnswer" min="0" max="999" size="10" placeholder="入力欄">
+          <button class="btn btn-success" id="judgement">判定する</button>
+        </div>
+      </div>
+    </div>
+    <div id="result-area"></div>
+  </div>
+  <script src="pun.js"></script>
+</body>
+</html>
