@@ -1,7 +1,7 @@
 'use strict';
 
 //語呂合わせの答え一覧
-const punAnswers = ["084", "089", "222", "250", "283", "325", "315", "296", "390", "556", "229", "596", "071", "884", "893", "714", "129", "919", "910", "929", "960", "025"];
+const punAnswers = ["084", "089", "222", "250", "283", "325", "315", "296", "390", "556", "229", "596", "710", "071", "884", "893", "714", "129", "919", "910", "929", "960", "025"];
 const randomIndex = Math.floor(Math.random() * punAnswers.length); //答えを配列の中からランダムで決める関数
 const Answer = punAnswers[randomIndex]; //ランダムで決まった答えを設定する関数
 const playerAnswerInput = document.getElementById('playerAnswer');
